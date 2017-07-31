@@ -1,0 +1,2 @@
+AIRFLOW_USER: root
+ENVIRONMENT_FILE: "/env.sh"

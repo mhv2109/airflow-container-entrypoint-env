@@ -1,0 +1,11 @@
+- name: Copy env script
+  template:
+    src: "{{ ENVIRONEMT_FILE_TEMPLATE }}"
+    dest: "{{ ENVIRONMENT_FILE }}"
+    mode: 0755
+
+- name: Add sourcing of environment script to entrypoint
+  lineinfile:
+    path: "./entrypoint.sh"
+    insertafter: "#!/usr/bin/env bash"
+    line: ". ./{{ ENVIRONMENT_FILE }}"
