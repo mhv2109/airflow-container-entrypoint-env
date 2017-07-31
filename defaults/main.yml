@@ -1,2 +1,3 @@
 AIRFLOW_USER: root
 ENVIRONMENT_FILE: "/env.sh"
+ENVIRONMENT_FILE_TEMPLATE: "/src/templates/env.sh.j2"
